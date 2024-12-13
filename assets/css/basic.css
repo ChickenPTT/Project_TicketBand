@@ -1,0 +1,291 @@
+@keyframes modalfaceIn {
+  from {
+    opacity: 0.3;
+    transform: translateY(-140px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+:root {
+  --face_color: #0d82d5;
+}
+
+/* grip */
+.grid {
+  width: 1090px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.grid__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.grid__column {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 20%;
+  margin-top: 10px;
+}
+.grid__row .grid__column:last-child {
+  width: 32%;
+}
+
+/* next,prev */
+.Change_slide {
+  position: absolute;
+  top: 50%;
+}
+.prev,
+.next {
+  position: absolute;
+  font-size: 20px;
+  cursor: pointer;
+  top: 50%;
+  padding: 10px;
+  color: var(--while-text);
+}
+
+.prev {
+  left: 10%;
+}
+.next {
+  right: 10%;
+}
+
+/* btn */
+.btn-empty {
+  display: flex;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn {
+  display: flex;
+  background-color: #f5167e;
+  border-radius: 50px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-text {
+  margin: auto;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  flex-grow: 1;
+  padding: 18px;
+  text-decoration: none;
+  color: var(--while-text);
+  border-radius: 999px;
+}
+/* modal */
+.modal-login {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.modal-container {
+  position: relative;
+  background-color: #fff;
+  width: 800px;
+  display: flex;
+  border-radius: 20px;
+  animation: modalfaceIn ease 0.7s;
+}
+
+.close,
+.close-img {
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: none;
+  text-align: center;
+  justify-content: center;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.login {
+  width: 500px;
+  padding: 40px 45px 24px;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+.login .login__body {
+}
+.login__body .btn-action {
+  cursor: pointer;
+  padding: 0px;
+
+  margin: 0px 0px 10px;
+  background: transparent;
+  border: none;
+}
+.login__body .btn-action img {
+  width: 21px;
+}
+.heading {
+  margin: 20px 0px;
+  color: rgb(36, 36, 36);
+}
+.login__body .heading h4 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.input {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+.input input {
+  width: 433px;
+  padding: 10px 0 10px 10px;
+  border: none;
+  font-size: 14px;
+  margin-left: 0px;
+  color: rgb(36, 36, 36);
+  outline: none;
+}
+.input .show-pass {
+  position: absolute;
+  bottom: 7px;
+  right: 0;
+  margin-right: 10px;
+  color: blue;
+}
+.show-pass {
+  cursor: pointer;
+}
+form button {
+  margin: 26px 0px 10px;
+  outline: none;
+  border-radius: 4px;
+  background: rgb(255, 66, 78);
+  padding: 13px 0px;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.forgot-pass {
+  color: rgb(13, 92, 182);
+  font-size: 13px;
+  margin: 20px 0px 0px;
+  cursor: pointer;
+  display: inline-block;
+}
+.create-account {
+  color: rgb(120, 120, 120);
+  font-size: 13px;
+  margin: 10px 0px 0px;
+}
+.create-account span {
+  color: rgb(13, 92, 182);
+  display: inline-block;
+  margin-left: 7px;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.half {
+  position: relative;
+  background: rgb(222, 235, 255);
+  width: 300px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0px 20px 20px 0px;
+}
+.half img {
+  width: 250px;
+  float: right;
+  border-radius: 50px;
+}
+.half h4 {
+  margin-top: 25px;
+  color: blue;
+  font-weight: 500;
+}
+/* sign up  */
+
+.login__body .heading_sign h4 {
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: 500;
+}
+.Sign_up-input {
+  margin-top: 20px;
+}
+.Sign_up-input .input input {
+  padding: 20px 0 10px 10px;
+}
+.change-to-login {
+  color: var(--face_color);
+  text-align: center;
+  cursor: pointer;
+  padding-top: 10px;
+}
+.social-heading {
+  position: relative;
+  text-align: center;
+  margin: 80px 0px 0px;
+}
+.social-heading span {
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  color: rgb(120, 120, 120);
+  background: rgb(255, 255, 255);
+  padding: 0px 20px;
+  z-index: 2;
+}
+.social-heading::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background: #ccc;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+}
+.social-sign {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  cursor: pointer;
+  font-size: 50px;
+  margin: 5px;
+}
+.social-face {
+  color: var(--face_color);
+}
+.social-gg {
+  color: #fbbc06;
+}

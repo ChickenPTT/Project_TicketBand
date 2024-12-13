@@ -1,0 +1,158 @@
+:root {
+    --white-text: #fff;
+    --deep-blue: rgba(36, 37, 101, 1);
+    --highlight-purple: rgba(122, 14, 190, 0.8);
+    --light-blue-bg: #F2F4FF;
+}
+/* keyframe */
+@keyframes show {
+    from{
+        opacity: 0;
+    }    
+    to{
+        overflow: 1;
+    }
+}
+@keyframes hidden {
+    from{
+        opacity: 1;
+    }    
+    to{
+        overflow: 2;
+    }
+}
+
+
+
+/* end keyframe */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+body {
+    background-color: var(--light-blue-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container_purchased{
+  
+}
+.container_create{
+
+}
+.container_purchased, .container_create{
+    width: 90%;
+    max-width: 1000px;
+    padding: 25px;
+    background-color: var(--white-text);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid var(--deep-blue);
+}
+
+.title {
+    text-align: center;
+    font-size: 1.8em;
+    color: var(--deep-blue);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.submit {
+    display: inline-block;
+    background-color: var(--highlight-purple);
+    color: var(--white-text);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: rgba(122, 14, 190, 1); /* Darker purple */
+}
+
+.table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--light-blue-bg);
+}
+
+thead th {
+    background-color: var(--deep-blue);
+    color: var(--white-text);
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #4a4a4a;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ebf0ff;
+}
+
+tbody tr:hover {
+    background-color: #dfe7fd;
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--white-text);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.primary {
+    background-color: var(--highlight-purple);
+}
+
+.btn.primary:hover {
+    background-color: rgba(122, 14, 190, 1);
+}
+
+.btn.danger {
+    background-color: #c97a7e;
+ 
+}
+
+.btn.danger:hover {
+    background-color: #a6575b;
+}
+
+tbody td[colspan='6'] {
+    text-align: center;
+    color: #4a4a4a;
+    font-style: italic;
+    padding: 20px;
+}
+.btn_link a[name^='btn-cancel'] {
+    float: right;
+    
+}
+.btn_link div[name ='btn-ticket'] {
+    cursor: pointer;
+    
+}
+.hidden{
+    display: none;
+}
+
